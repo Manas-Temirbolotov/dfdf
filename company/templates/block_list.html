@@ -1,0 +1,30 @@
+{% extends 'base.html'%}
+
+{% block content %}
+<h1> Список блоков</h1>
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">номер блока</th>
+      <th scope="col">Стоимость за квадратный метр квартиры</th>
+      <th scope="col">Количество подъездов</th>
+      <th scope="col">Количество этажей</th>
+      <th scope="col">Количество квартир на этаж</th>
+    </tr>
+
+  </thead>
+  <tbody>
+  {% for block in blocks %}
+    <tr>
+      <th scope="row">{{block.number}}</th>
+      <td>{{block.price}}</td>
+      <td>{{block.entrance}}</td>
+      <td>{{block.floor}} </td>
+      <td>{{block.flat}} </td>
+    </tr>
+{% endfor%}
+
+  </tbody>
+</table>
+       {% endblock content %}

@@ -1,0 +1,12 @@
+{% extends 'base.html' %} {% block content %}
+Информация о квартирах №{{ object.id }}
+ФИО владельца : {{ object.name }}
+
+Cтатус: {{ object.status }}
+
+Номер блока: {{ object.block.number }}
+
+Стоимость за квадратный метр квартиры: {{ object.block.price }}
+
+{% for var in my_var %}
+{% endblock content %}
